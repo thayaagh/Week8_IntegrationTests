@@ -1,0 +1,188 @@
+{
+  "id": "540997da-fb71-4647-bccc-1d559719266e",
+  "version": "2.0",
+  "name": "Microsoft Test",
+  "url": "https://www.microsoft.com",
+  "tests": [{
+    "id": "911fe077-b011-411c-8fc9-45341f2b3805",
+    "name": "Copilot Suche",
+    "commands": [{
+      "id": "27357624-ac9d-428a-97ae-445708b534c4",
+      "comment": "",
+      "command": "open",
+      "target": "/de-ch/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7ebbb2c-2fdc-47aa-96ef-24d1b25d9e40",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1033x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbeb1826-a442-4f1d-b7cc-4637a79b76ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//button[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Auf Microsoft.com suchen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1cbb9e22-40c4-4808-920d-e36531f29621",
+      "comment": "",
+      "command": "click",
+      "target": "id=cli_shellHeaderSearchInput",
+      "targets": [
+        ["id=cli_shellHeaderSearchInput", "id"],
+        ["name=q", "name"],
+        ["css=#cli_shellHeaderSearchInput", "css:finder"],
+        ["xpath=//input[@id='cli_shellHeaderSearchInput']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c098c932-139a-4845-b01f-7a57dbeeca04",
+      "comment": "",
+      "command": "type",
+      "target": "id=cli_shellHeaderSearchInput",
+      "targets": [
+        ["id=cli_shellHeaderSearchInput", "id"],
+        ["name=q", "name"],
+        ["css=#cli_shellHeaderSearchInput", "css:finder"],
+        ["xpath=//input[@id='cli_shellHeaderSearchInput']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Copilot"
+    }, {
+      "id": "36226cb9-eeb6-470c-9124-d5f2de93da27",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=cli_shellHeaderSearchInput",
+      "targets": [
+        ["id=cli_shellHeaderSearchInput", "id"],
+        ["name=q", "name"],
+        ["css=#cli_shellHeaderSearchInput", "css:finder"],
+        ["xpath=//input[@id='cli_shellHeaderSearchInput']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d18cc7a4-c625-415f-af2b-d04caa4d02f8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mb-n4",
+      "targets": [
+        ["css=.mb-n4", "css:finder"],
+        ["xpath=//div[@id='rootContainer_Search']/div/div[4]/div/ul", "xpath:idRelative"],
+        ["xpath=//div[4]/div/ul", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "5bb2f331-4016-4753-b6ba-1d5c2bd1adfd",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.row:nth-child(6)",
+      "targets": [],
+      "value": "\"Microsoft 365\""
+    }, {
+      "id": "0a32942b-3997-496f-b434-512a5e3520cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='Copilot']", "xpath:attributes"],
+        ["xpath=//div[@id='rootContainer_Search']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2b38f00-163c-4275-b387-3a8f12faf660",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='Microsoft 365']", "xpath:attributes"],
+        ["xpath=//div[@id='rootContainer_Search']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Microsoft 365"
+    }, {
+      "id": "9a36439d-7b9a-4e52-91d4-f87f6a1834a0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='Microsoft 365']", "xpath:attributes"],
+        ["xpath=//div[@id='rootContainer_Search']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "6db6e029-1867-4f09-81b3-89c08679a298",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='Microsoft 365']", "xpath:attributes"],
+        ["xpath=//div[@id='rootContainer_Search']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "9be9c51e-9c56-40b0-bb2f-74a3b5368153",
+      "comment": "",
+      "command": "click",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//button[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='rootContainer_Search']/div/div/form/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "378576ac-83db-4942-b71b-229bfb458936",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.mb-n4",
+      "targets": [
+        ["css=.mb-n4", "css:finder"],
+        ["xpath=//div[@id='rootContainer_Search']/div/div[4]/div/ul", "xpath:idRelative"],
+        ["xpath=//div[4]/div/ul", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "f5a18f19-ba12-4346-99af-34d54ecbf7da",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.row:nth-child(6)",
+      "targets": [],
+      "value": "\"Microsoft 365\""
+    }]
+  }],
+  "suites": [{
+    "id": "d5d9003c-a530-4f0d-bd0b-ec5b638a0bad",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["911fe077-b011-411c-8fc9-45341f2b3805"]
+  }],
+  "urls": ["https://www.microsoft.com/"],
+  "plugins": []
+}

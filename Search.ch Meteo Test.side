@@ -1,0 +1,91 @@
+{
+  "id": "80b91806-bfda-467e-9d52-e24d5c727987",
+  "version": "2.0",
+  "name": "Search.ch Meteo Test",
+  "url": "https://search.ch",
+  "tests": [{
+    "id": "cf584f89-764e-4261-bae0-588e1ac7d8d0",
+    "name": "Winterthur Suche",
+    "commands": [{
+      "id": "82bb743f-2306-4cf2-ab2f-7e2bb6e176bf",
+      "comment": "",
+      "command": "open",
+      "target": "/meteo/ch",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f87b2ada-67dd-4af9-a3ed-8f3ed31e9e53",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1035x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6049cfea-296d-483b-a9d3-762b3750b37f",
+      "comment": "",
+      "command": "click",
+      "target": "id=plz_ort",
+      "targets": [
+        ["id=plz_ort", "id"],
+        ["name=plz_ort", "name"],
+        ["css=#plz_ort", "css:finder"],
+        ["xpath=//input[@id='plz_ort']", "xpath:attributes"],
+        ["xpath=//div[@id='sl-service-form-container']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84109bbc-9c09-4afc-9498-ca6fe04fcc17",
+      "comment": "",
+      "command": "type",
+      "target": "id=plz_ort",
+      "targets": [
+        ["id=plz_ort", "id"],
+        ["name=plz_ort", "name"],
+        ["css=#plz_ort", "css:finder"],
+        ["xpath=//input[@id='plz_ort']", "xpath:attributes"],
+        ["xpath=//div[@id='sl-service-form-container']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Winterthur"
+    }, {
+      "id": "9a2d0b79-141d-4c70-ad0d-f2ef67b9f5f3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=plz_ort",
+      "targets": [
+        ["id=plz_ort", "id"],
+        ["name=plz_ort", "name"],
+        ["css=#plz_ort", "css:finder"],
+        ["xpath=//input[@id='plz_ort']", "xpath:attributes"],
+        ["xpath=//div[@id='sl-service-form-container']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "5c545d10-2438-49a3-85c0-a98920d8ce86",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=meteo-prognosis-location",
+      "targets": [],
+      "value": "Winterthur"
+    }, {
+      "id": "167edac4-d9da-4668-a7ab-569ef84652f4",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ec942f34-734d-412a-a6b7-693aedafc6c0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cf584f89-764e-4261-bae0-588e1ac7d8d0"]
+  }],
+  "urls": ["https://search.ch/"],
+  "plugins": []
+}
